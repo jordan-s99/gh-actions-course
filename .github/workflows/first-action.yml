@@ -1,0 +1,17 @@
+name: First Workflow 
+# must have name 
+on: workflow_dispatch
+# reserved keyword for specifying which events should trigger the workflow 
+# lots of events you can listen for, workflow_dispatch means manual trigger by user 
+jobs: 
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye 
+        run: echo "Done, goodbye!" 
+# defines what work will be done 
+# yml uses indentations 
+# first-job is an example, could name it anything 
+# runs-on key is reserved, and specifies the runner for the job 
